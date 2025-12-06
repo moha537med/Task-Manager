@@ -29,13 +29,13 @@ export default function App() {
     return t.completed;
   });
 
-  // Progress Bar calculation
+  // Progress Bar
   const total = todos.length;
   const completed = todos.filter(t => t.completed).length;
   const progress = total === 0 ? 0 : (completed / total) * 100;
 
   return (
-    <div className="min-h-screen flex items-center justify-center p-4 bg-gradient-to-r from-purple-600 via-blue-500 to-sky-400 transition-colors">
+    <div className="min-h-screen flex items-center justify-center p-4 bg-linear-to-r from-purple-600 via-blue-500 to-sky-400 transition-colors">
       <div className="max-w-xl w-full bg-white rounded-lg shadow-lg ">
         <Header />
         <TodoInputs onAdd={addTodo} />
